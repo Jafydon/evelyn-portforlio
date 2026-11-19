@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official professional portfolio of Barrister Evelyn Olotu.">
+<title>Barrister Evelyn Emakweyi Olotu | Legal Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #111411;
+  --dark: #191e19;
+  --gold: #c7a66a;
+  --cream: #f7f5ef;
+  --white: #ffffff;
+  --muted: #777b73;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--black);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(17,20,17,.97);
+  color: white;
+  border-bottom: 1px solid rgba(199,166,106,.25);
+}
+
+nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.logo small {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: white;
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-contact {
+  border: 1px solid var(--gold);
+  padding: 11px 19px;
+  color: var(--gold);
+}
+
+.menu-btn {
+  display: none;
+  color: white;
+  background: none;
+  border: 0;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 680px;
+  background: var(--black);
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border: 1px solid rgba(199,166,106,.15);
+  border-radius: 50%;
+  right: -100px;
+  top: 60px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+  padding: 75px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(43px, 5.5vw, 75px);
+  line-height: 1.13;
+  font-weight: 500;
+  margin: 22px 0;
+}
+
+.hero h1 span { color: var(--gold); }
+
+.hero p {
+  color: #c4c6c0;
+  max-width: 490px;
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  height: 480px;
+  position: relative;
+  z-index: 2;
+  background: #252a25;
+  border: 1px solid rgba(199,166,106,.45);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 20px;
+  left: -30px;
+  background: var(--gold);
+  color: var(--black);
+  padding: 16px 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+}
+
+/* ABOUT */
+
+section { padding: 105px 0; }
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 15px 0 24px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.about-photo {
+  height: 490px;
+  background: #ddd9ce;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 19px;
+}
+
+.gold-line {
+  width: 55px;
+  height: 2px;
+  background: var(--gold);
+  margin: 25px 0;
+}
+
+/* PRACTICE AREAS */
+
+.practice {
+  background: var(--dark);
+  color: white;
+}
+
+.practice .section-heading { color: white; }
+
+.practice-intro {
+  color: #aeb3aa;
+  max-width: 600px;
+  font-size: 14px;
+  margin-bottom: 45px;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.practice-card {
+  padding: 34px 27px;
+  min-height: 235px;
+  border: 1px solid rgba(199,166,106,.28);
+  transition: .3s;
+}
+
+.practice-card:hover {
+  background: #242b23;
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.practice-card .number {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+
+.practice-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.practice-card p {
+  color: #aeb3aa;
+  font-size: 13px;
+}
+
+/* EXPERIENCE */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.experience-grid p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.experience-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #dedbd2;
+}
+
+.experience-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.experience-item small {
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* QUOTE */
+
+.quote {
+  background: #eae6dc;
+  text-align: center;
+}
+
+.quote blockquote {
+  max-width: 850px;
+  margin: auto;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(25px, 3.5vw, 39px);
+  line-height: 1.5;
+}
+
+.quote p {
+  color: var(--muted);
+  margin-top: 25px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--black);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.contact-details p {
+  color: #b4b9b0;
+  font-size: 14px;
+  margin: 17px 0;
+}
+
+.contact-details strong { color: var(--gold); }
+
+.contact-form {
+  display: grid;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  background: #202520;
+  color: white;
+  border: 1px solid #42473f;
+  font: inherit;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* FOOTER */
+
+footer {
+  background: #090c09;
+  color: #969b91;
+  padding: 27px 0;
+  font-size: 12px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer span { color: var(--gold); }
+
+@media(max-width: 850px) {
+  .menu-btn { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    padding: 25px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.active { display: flex; }
+
+  .hero-content,
+  .about-grid,
+  .experience-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-image {
+    height: 430px;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .practice-grid { grid-template-columns: repeat(2, 1fr); }
+
+  section { padding: 75px 0; }
+}
+
+@media(max-width: 550px) {
+  .practice-grid { grid-template-columns: 1fr; }
+  .hero { min-height: auto; }
+  .hero-content { padding: 65px 0; }
+  .hero-image { height: 360px; }
+  .image-caption { left: -10px; }
+  .section-heading { font-size: 35px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a href="#home" class="logo">
+      EVELYN OLOTU
+      <small>BARRISTER & SOLICITOR</small>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#practice">Practice Areas</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav-contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div>
+      <div class="eyebrow">Professional Legal Portfolio</div>
+      <h1>Justice With <span>Integrity.</span><br>Excellence In Practice.</h1>
+      <p>
+        Welcome to the professional portfolio of Barrister Evelyn Olotu.
+        Discover her legal philosophy, professional journey and commitment
+        to thoughtful, principled legal practice.
+      </p>
+      <a href="#about" class="btn">DISCOVER MY PROFILE &nbsp; →</a>
+    </div>
+
+    <div class="hero-image">
+      <!-- Replace with Barrister Evelyn's professional portrait -->
+      <img src="images/evelyn-portrait.jpg"
+           alt="Professional portrait of Barrister Evelyn Emakweyi Olotu"
+           onerror="this.style.display='none'">
+      <div class="image-caption">Barrister Evelyn Emakweyi Olotu</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <!-- Replace with another professional photograph -->
+      <img src="images/evelyn-about.jpg"
+           alt="Barrister Evelyn Emakweyi Olotu"
+           onerror="this.style.display='none'">
+    </div>
+
+    <div class="about-text">
+      <div class="eyebrow">A Little About Me</div>
+      <h2 class="section-heading">Committed to Justice, Guided by Integrity.</h2>
+      <div class="gold-line"></div>
+
+      <p>
+        I am Barrister Evelyn Emakweyi Olotu, a legal professional committed to
+        professionalism, integrity and the pursuit of justice.
+      </p>
+
+      <p>
+        My approach to legal practice is grounded in careful analysis,
+        ethical responsibility and a dedication to understanding the
+        unique circumstances of every legal matter.
+      </p>
+
+      <p>
+        This portfolio provides an overview of my professional background,
+        areas of legal interest, experience and commitment to the legal profession.
+      </p>
+
+      <a href="#contact" class="btn">GET IN TOUCH</a>
+    </div>
+  </div>
+</section>
+
+<section class="practice" id="practice">
+  <div class="container">
+    <div class="eyebrow">Areas of Practice</div>
+    <h2 class="section-heading">Legal Expertise & Practice Areas</h2>
+    <p class="practice-intro">
+      Explore the areas of law in which my professional experience
+      and interests are focused. These areas should be updated to
+      reflect my actual qualifications and practice.
+    </p>
+
+    <div class="practice-grid">
+      <div class="practice-card">
+        <div class="number">01</div>
+        <h3>Corporate Law</h3>
+        <p>Business legal matters, corporate governance and commercial transactions.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="number">02</div>
+        <h3>Litigation</h3>
+        <p>Legal disputes, court proceedings and dispute resolution.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="number">03</div>
+        <h3>Property Law</h3>
+        <p>Property transactions, land matters and legal documentation.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="number">04</div>
+        <h3>Family Law</h3>
+        <p>Legal matters involving family relationships and related disputes.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="number">05</div>
+        <h3>Legal Advisory</h3>
+        <p>Legal research, guidance and professional advisory services.</p>
+      </div>
+
+      <div class="practice-card">
+        <div class="number">06</div>
+        <h3>Alternative Dispute Resolution</h3>
+        <p>Negotiation, mediation and other approaches to resolving disputes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container experience-grid">
+    <div>
+      <div class="eyebrow">Professional Journey</div>
+      <h2 class="section-heading">Experience & Professional Background</h2>
+      <div class="gold-line"></div>
+      <p>
+        A professional journey shaped by legal education, practical
+        experience, continuous learning and a commitment to ethical
+        legal practice.
+      </p>
+    </div>
+
+    <div>
+      <div class="experience-item">
+        <small>LEGAL EDUCATION</small>
+        <h3>Academic Qualifications</h3>
+        <p>FEDERAL GOVERNTMENT GIRLS'S COLLEGE GBOKO
+
+            BENUE STATE UNIVERSITY, MARKURDI.</p>
+            <p>Law School Bwari, Abuja</p>
+      </div>
+
+      <div class="experience-item">
+        <small>PROFESSIONAL QUALIFICATION</small>
+        <h3>Call to the Nigerian Bar</h3>
+        <p> SEPTEMBER 2009.</p>
+      </div>
+
+      <div class="experience-item">
+        <small>CAREER EXPERIENCE</small>
+        <h3>Professional Experience</h3>
+        <p>D.D Venda & Co  - Legal Practioner - 2013</p>                            
+        <p>FCT-JSC Abuja -  Principal Reg 1  - 2026.</p>
+
+      </div>
+
+      <div class="experience-item">
+        <small>ACHIEVEMENTS</small>
+        <h3>Professional Development</h3>
+        <p>Assitant Director FCT-JSC.</p>
+        <p>Senior Litigation Associate(D.D Venda & Co).</p>
+        <p>Member Of The Nigerian Bar Association.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <div class="eyebrow">Legal Philosophy</div>
+    <blockquote>
+      "The pursuit of justice demands integrity, courage,
+      diligence and an unwavering respect for the rule of law."
+    </blockquote>
+    <p>BARRISTER EVELYN EMAKWEYI OLOTU</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Let's Connect</div>
+      <h2 class="section-heading">Start a Conversation.</h2>
+      <div class="gold-line"></div>
+      <p style="color:#b4b9b0;max-width:420px;font-size:14px;">
+        For professional enquiries, consultation requests or
+        other correspondence, please get in touch.
+      </p>
+
+      <div class="contact-details">
+        <p><strong>Email:</strong> evelynlinks2008@gmail.com </p>
+        <p><strong>Phone:</strong> +2347039720109</p>
+        <p><strong>Location:</strong> FCT JUDICIAL SERVIVE COMMITTEE</p>
+        <p><strong>LinkedIn:</strong> evelynlinks2008@gmail.com </p>
+        <p><strong>WhatsApp:</strong> +2347039720109 </p>
+      </div>
+    </div>
+
+    <form class="contact-form" action="https://formsubmit.co/evelynlinks2008@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry from Barrister Evelyn Olotu's website">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Write your message..." required></textarea>
+      <button type="submit" class="btn">SEND ENQUIRY →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <p>© <span id="year"></span> Barrister Evelyn Emakweyi Olotu. All Rights Reserved.</p>
+    <p>Designed with <span>Excellence & Integrity.</span></p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('active');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function sendMessage(event) {
+  event.preventDefault();
+
+  const recipient = "REPLACE_WITH_OFFICIAL_EMAIL";
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  if (recipient === "REPLACE_WITH_OFFICIAL_EMAIL") {
+    alert("Please configure the official email address in the website code first.");
+    return;
+  }
+
+  const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+  window.location.href =
+    `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
+
+</body>
+</html>
